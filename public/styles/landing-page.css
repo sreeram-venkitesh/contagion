@@ -1,0 +1,77 @@
+body, html{
+    height: 100%;
+    width : 100%;
+    margin:0;
+    
+}
+
+h1{
+    font-size: 24px;
+}
+
+.content{
+    display: flex;
+    height:100%;
+}
+
+
+.sidebar{
+    height: 100%;
+    width:100px;
+    display: block;
+
+}
+.sidetitle{
+    height: 100%;
+    width:100px;
+    display: flex;
+
+}
+
+.logoimg{
+    bottom:0;
+    position: absolute;
+}
+
+.main-content{
+    height: 100%;
+    width:100%;
+    background-color: #eee;
+}
+
+
+.title{
+    width: 100%;
+    vertical-align: middle;
+  
+    margin: auto 0;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);  
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+select{
+    position: absolute;
+    top:0;
+    right:0;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #fff;
+    width: 250px;
+}
+
+.mynetwork {
+    width: 100%;
+    height: 100%;
+  }

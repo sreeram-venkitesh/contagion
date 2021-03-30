@@ -1,0 +1,22 @@
+{
+  "name": "contagion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fillerInk/contagion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fillerInk/contagion/issues"
+  },
+  "homepage": "https://github.com/fillerInk/contagion#readme",
+  "dependencies": {
+    "alpine": "^0.2.1"
+  }
+}

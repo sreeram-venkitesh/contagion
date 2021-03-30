@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script
+    type="text/javascript"
+    src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <link rel="stylesheet" href="./styles/landing-page.css">
+    <title>Contagion</title>
+</head>
+<body>
+    <div class="content">
+        <div class="sidebar">
+            <div class="sidetitle">
+                <h1 class="rotate title">CONTAGION</h1>
+            </div> 
+            <img class="logoimg" src="./assets/logo.png" alt="Logo" width="100px" height="auto">
+        </div>
+        <div class="main-content">
+           <select name="language" id="language">
+               <option selected disabled hidden>Language</option>
+               <option value="english">English</option>
+               <option value="kannada">ಕನ್ನಡ</option>
+           </select>
+           <div class="mynetwork" id="mynetwork"></div>
+
+
+        </div>
+    </div>
+       
+    <script src="./index.js"></script>
+</body>
+</html>
