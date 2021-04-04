@@ -33,7 +33,7 @@ var nodes = new vis.DataSet([
     { id: 19, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Fluid Dialogues"},
     { id: 20, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Drawing the Bombay Plague"},
     { id: 21, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Alexander Fleming"},
-    { id: 22, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Controlling the Plague in British India"},
+    { id: 22, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, popup: "Controlling the Plague in British India", image:"assets/card.png"},
     { id: 23, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Ants and Antimicrobial Resistance"},
 
 
@@ -88,13 +88,7 @@ var edges = new vis.DataSet([
 
 ]);
 
-var offsetx,
-    offsety,
-    scale,
-    positionx,
-    positiony,
-    duration,
-    easingFunction;
+
 
 
 // create a network
@@ -105,7 +99,25 @@ var data = {
     
 };
 var options = {
+    nodes:{
+        shapeProperties: {
+            useBorderWithImage: true,
+          },
+    },
     interaction: { hover: true },
+    physics: {
+        barnesHut: {
+          theta: 0,
+          gravitationalConstant: -3000,
+          springConstant: 0.1,
+          damping: 0.3,
+          springLength: 155,
+          avoidOverlap: 0.1
+        },
+        maxVelocity: 27,
+        minVelocity: 0.08
+    },
+   
 };
 var network = new vis.Network(container, data, options);
 
@@ -194,6 +206,7 @@ function showStuff(x){
 var moving = false;
 
 network.on("hoverNode", function (params) {
+    network.canvas.body.container.style.cursor = 'pointer'
     const node = this.getNodeAt(params.pointer.DOM)
 
     if(node < 8){
@@ -202,7 +215,7 @@ network.on("hoverNode", function (params) {
         console.log("Moving is true")
         moving = true;
         var options = {
-            scale: 2,
+            scale: 1.5,
             offset: {x:0, y:0},
             animation: { 
               duration: 1000,
@@ -218,9 +231,12 @@ network.on("hoverNode", function (params) {
             moving = false; 
             console.log("Moving is false")
         },1000);
-    }}
-           
-  });
+    }}  
+});
+
+network.on("blurNode", function (params) {
+    network.canvas.body.container.style.cursor = 'default'
+});
 
 // network.on("click", function (params) {
 //     params.event = "[original event]";
