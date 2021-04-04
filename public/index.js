@@ -19,22 +19,22 @@ var nodes = new vis.DataSet([
     { id: 6, shape:"circle", group: 2, font: { size: 24, color:"#fff" }, color: "#d62b2b", label: "Experimenting"},
     { id: 7, shape:"circle", group: 2, font: { size: 24, color:"#fff" }, color: "#d62b2b", label: "Consequences"},
 
-    { id: 8,  shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "2020 Vision", title:"2020 Vision"},
-    { id: 9,  shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Covid-19 Indoor Safety Toop"},
-    { id: 10, shape:"box", hidden:true, font: {size: 20, color:"#fff"}, color:"#3e6cda", label: "Mapping Cholera", title: popup},
-    { id: 11, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Theriak Disease Map"},
-    { id: 12, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "A Cluster of 17 Cases"},
-    { id: 13, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "When the World Was A Laugh"},
-    { id: 14, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Chameleon Project"},
-    { id: 15, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "The Glassroom: Misinformation Edition"},
-    { id: 16, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Malware Museum"},
-    { id: 17, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Robert Koch Cholera Map"},
-    { id: 18, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Wendell Stanley Piece"},
-    { id: 19, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Fluid Dialogues"},
-    { id: 20, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Drawing the Bombay Plague"},
-    { id: 21, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Alexander Fleming"},
-    { id: 22, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, popup: "Controlling the Plague in British India", image:"assets/card.png"},
-    { id: 23, shape:"box", hidden:true, font: {size: 12, color:"#fff"}, color:"#3e6cda", label: "Ants and Antimicrobial Resistance"},
+    { id: 8,  shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/2.png", popup: "2020 Vision"},
+    { id: 9,  shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/9.png", popup: "Covid-19 Indoor Safety Toop"},
+    { id: 10, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/11.png", popup: "Mapping Cholera"},
+    { id: 11, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/5.png", popup: "Theriak Disease Map"},
+    { id: 12, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/8.png", popup: "A Cluster of 17 Cases"},
+    { id: 13, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/4.png", popup: "When the World Was A Laugh"},
+    { id: 14, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/12.png", popup: "Chameleon Project"},
+    { id: 15, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/7.png", popup: "The Glassroom: Misinformation Edition"},
+    { id: 16, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/10.png", popup: "Malware Museum"},
+    { id: 17, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/15.png", popup: "Robert Koch Cholera Map"},
+    { id: 18, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/16.png", popup: "Crystallizing Viral History"},
+    { id: 19, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/13.png", popup: "Fluid Dialogues"},
+    { id: 20, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/3.png", popup: "Drawing the Bombay Plague"},
+    { id: 21, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/14.png", popup: "Alexander Fleming"},
+    { id: 22, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/1.png", popup: "Controlling the Plague in British India"},
+    { id: 23, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/6.png", popup: "Ants and Antimicrobial Resistance"},
 
 
 ]);
@@ -111,8 +111,8 @@ var options = {
           gravitationalConstant: -3000,
           springConstant: 0.1,
           damping: 0.3,
-          springLength: 155,
-          avoidOverlap: 0.1
+          springLength: 200,
+          avoidOverlap: 0.3
         },
         maxVelocity: 27,
         minVelocity: 0.08
@@ -210,28 +210,51 @@ network.on("hoverNode", function (params) {
     const node = this.getNodeAt(params.pointer.DOM)
 
     if(node < 8){
-    if(!moving){
-        console.log(node)
-        console.log("Moving is true")
-        moving = true;
-        var options = {
-            scale: 1.5,
-            offset: {x:0, y:0},
-            animation: { 
-              duration: 1000,
-              easingFunction: "linear"
-            }
-        };
-        hideNodes()
-        network.focus(this.getNodeAt(params.pointer.DOM),options)
-        showStuff(node)
-
-        setTimeout(function(){
+        if(!moving){
             console.log(node)
-            moving = false; 
-            console.log("Moving is false")
-        },1000);
-    }}  
+            console.log("Moving is true")
+            moving = true;
+            var options = {
+                scale: 1.5,
+                offset: {x:0, y:0},
+                animation: { 
+                duration: 1000,
+                easingFunction: "linear"
+                }
+            };
+            hideNodes()
+            network.focus(this.getNodeAt(params.pointer.DOM),options)
+            showStuff(node)
+
+            setTimeout(function(){
+                console.log(node)
+                moving = false; 
+                console.log("Moving is false")
+            },1000);
+        }
+    }
+    else if(node >=8){
+        if(!moving){
+            console.log(node)
+            console.log("Moving is true")
+            moving = true;
+            var options = {
+                scale: 2,
+                offset: {x:0, y:0},
+                animation: { 
+                duration: 1000,
+                easingFunction: "linear"
+                }
+            };
+            network.focus(this.getNodeAt(params.pointer.DOM),options)
+
+            setTimeout(function(){
+                console.log(node)
+                moving = false; 
+                console.log("Moving is false")
+            },1000);
+        }
+    }  
 });
 
 network.on("blurNode", function (params) {
