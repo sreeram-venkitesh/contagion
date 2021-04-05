@@ -19,79 +19,78 @@ var nodes = new vis.DataSet([
     { id: 6, shape:"circle", group: 2, font: { size: 24, color:"#fff" }, color: "#d62b2b", label: "Experimenting"},
     { id: 7, shape:"circle", group: 2, font: { size: 24, color:"#fff" }, color: "#d62b2b", label: "Consequences"},
 
-    { id: 8,  shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/2.png", popup: "2020 Vision"},
-    { id: 9,  shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/9.png", popup: "Covid-19 Indoor Safety Toop"},
-    { id: 10, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/11.png", popup: "Mapping Cholera"},
-    { id: 11, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/5.png", popup: "Theriak Disease Map"},
-    { id: 12, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/8.png", popup: "A Cluster of 17 Cases"},
-    { id: 13, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/4.png", popup: "When the World Was A Laugh"},
-    { id: 14, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/12.png", popup: "Chameleon Project"},
-    { id: 15, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/7.png", popup: "The Glassroom: Misinformation Edition"},
-    { id: 16, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/10.png", popup: "Malware Museum"},
-    { id: 17, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/15.png", popup: "Robert Koch Cholera Map"},
-    { id: 18, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/16.png", popup: "Crystallizing Viral History"},
-    { id: 19, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/13.png", popup: "Fluid Dialogues"},
-    { id: 20, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/3.png", popup: "Drawing the Bombay Plague"},
-    { id: 21, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/14.png", popup: "Alexander Fleming"},
-    { id: 22, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/1.png", popup: "Controlling the Plague in British India"},
-    { id: 23, shape:"image", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, image: "assets/6.png", popup: "Ants and Antimicrobial Resistance"},
+    { id: 8,  shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/2.png", */  label: "2020 Vision"},
+    { id: 9,  shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/9.png", */  label: "Covid-19 Indoor Safety Toop"},
+    { id: 10, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/11.png",*/  label: "Mapping Cholera"},
+    { id: 11, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/5.png", */  label: "Theriak Disease Map"},
+    { id: 12, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/8.png", */  label: "A Cluster of 17 Cases"},
+    { id: 13, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/4.png", */  label: "When the World Was A Laugh"},
+    { id: 14, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/12.png",*/  label: "Chameleon Project"},
+    { id: 15, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/7.png", */  label: "The Glassroom: Misinformation Edition"},
+    { id: 16, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/10.png",*/  label: "Malware Museum"},
+    { id: 17, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/15.png",*/  label: "Robert Koch Cholera Map"},
+    { id: 18, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/16.png",*/  label: "Crystallizing Viral History"},
+    { id: 19, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/13.png",*/  label: "Fluid Dialogues"},
+    { id: 20, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/3.png", */  label: "Drawing the Bombay Plague"},
+    { id: 21, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/14.png",*/  label: "Alexander Fleming"},
+    { id: 22, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/1.png", */  label: "Controlling the Plague in British India"},
+    { id: 23, shape:"box", borderWidth: 2, color: {border: "#2d2d2d"}, hidden:true, size:80, padding:20, /*image: "assets/6.png", */  label: "Ants and Antimicrobial Resistance"},
 
 
 ]);
-
+var opac = 0;
+var exhibitlength = 400;
 // create an array with edges
 var edges = new vis.DataSet([
-    { from: 8, to: 3, color: {opacity: 0} },
-    { from: 8, to: 1, color: {opacity: 0} },
-    { from: 9, to: 1, color: {opacity: 0} },
-    { from: 9, to: 3, color: {opacity: 0} },
+    { from: 8, to: 3,   length:exhibitlength, color: {opacity: opac} },
+    { from: 8, to: 1,   length:exhibitlength, color: {opacity: opac} },
+    { from: 9, to: 1,   length:exhibitlength, color: {opacity: opac} },
+    { from: 9, to: 3,   length:exhibitlength, color: {opacity: opac} },
+    { from: 10, to: 1 , length:exhibitlength, color:{opacity:opac}},
+    { from: 11, to: 1 , length:exhibitlength, color:{opacity:opac}},
+    { from: 10, to: 4 , length:exhibitlength, color:{opacity:opac}},
+    { from: 11, to: 4 , length:exhibitlength, color:{opacity:opac}},
+    { from: 12, to: 3 , length:exhibitlength, color:{opacity:opac}},
+    { from: 13, to: 3 , length:exhibitlength, color:{opacity:opac}},
+    { from: 14, to: 3 , length:exhibitlength, color:{opacity:opac}},
+    { from: 12, to: 2 , length:exhibitlength, color:{opacity:opac}},
+    { from: 13, to: 2 , length:exhibitlength, color:{opacity:opac}},
+    { from: 14, to: 2 , length:exhibitlength, color:{opacity:opac}},
+    { from: 15, to: 2 , length:exhibitlength, color:{opacity:opac}},
+    { from: 16, to: 2 , length:exhibitlength, color:{opacity:opac}},
+    { from: 15, to: 4 , length:exhibitlength, color:{opacity:opac}},
+    { from: 16, to: 4 , length:exhibitlength, color:{opacity:opac}},
+    { from: 17, to: 5 , length:exhibitlength, color:{opacity:opac}},
+    { from: 18, to: 5 , length:exhibitlength, color:{opacity:opac}},
+    { from: 17, to: 4 , length:exhibitlength, color:{opacity:opac}},
+    { from: 18, to: 4 , length:exhibitlength, color:{opacity:opac}},
+    { from: 20, to: 5 , length:exhibitlength, color:{opacity:opac}},
+    { from: 21, to: 5 , length:exhibitlength, color:{opacity:opac}},
+    { from: 22, to: 5 , length:exhibitlength, color:{opacity:opac}},
+    { from: 20, to: 7 , length:exhibitlength, color:{opacity:opac}},
+    { from: 21, to: 7 , length:exhibitlength, color:{opacity:opac}},
+    { from: 22, to: 7 , length:exhibitlength, color:{opacity:opac}},
+    { from: 23, to: 6 , length:exhibitlength, color:{opacity:opac}},
+    { from: 23, to: 7 , length:exhibitlength, color:{opacity:opac}},
+    { from: 19, to: 2 , length:exhibitlength, color:{opacity:opac}},
+    { from: 19, to: 7 , length:exhibitlength, color:{opacity:opac}},
 
-    { from: 10, to: 1 , color:{opacity:0}},
-    { from: 11, to: 1 , color:{opacity:0}},
-    { from: 10, to: 4 , color:{opacity:0}},
-    { from: 11, to: 4 , color:{opacity:0}},
-
-    { from: 12, to: 3 , color:{opacity:0}},
-    { from: 13, to: 3 , color:{opacity:0}},
-    { from: 14, to: 3 , color:{opacity:0}},
-    { from: 12, to: 2 , color:{opacity:0}},
-    { from: 13, to: 2 , color:{opacity:0}},
-    { from: 14, to: 2 , color:{opacity:0}},
-
-    { from: 15, to: 2 , color:{opacity:0}},
-    { from: 16, to: 2 , color:{opacity:0}},
-    { from: 15, to: 4 , color:{opacity:0}},
-    { from: 16, to: 4 , color:{opacity:0}},
-
-    { from: 17, to: 5 , color:{opacity:0}},
-    { from: 18, to: 5 , color:{opacity:0}},
-    { from: 17, to: 4 , color:{opacity:0}},
-    { from: 18, to: 4 , color:{opacity:0}},
-
-    { from: 20, to: 5 , color:{opacity:0}},
-    { from: 21, to: 5 , color:{opacity:0}},
-    { from: 22, to: 5 , color:{opacity:0}},
-
-    { from: 20, to: 7 , color:{opacity:0}},
-    { from: 21, to: 7 , color:{opacity:0}},
-    { from: 22, to: 7 , color:{opacity:0}},
-
-    { from: 23, to: 6 , color:{opacity:0}},
-    { from: 23, to: 7 , color:{opacity:0}},
-
-    { from: 19, to: 2 , color:{opacity:0}},
-    { from: 19, to: 7 , color:{opacity:0}},
-
-
-
-
-
+    {from: 1, to: 2, length:1000, color:{opacity:opac}},
+    {from: 2, to: 3, length:1000, color:{opacity:opac}},
+    {from: 3, to: 4, length:1000, color:{opacity:opac}},
+    {from: 4, to: 5, length:1000, color:{opacity:opac}},
+    {from: 5, to: 6, length:1000, color:{opacity:opac}},
+    {from: 6, to: 7, length:1000, color:{opacity:opac}},
+    {from: 7, to: 1, length:1000, color:{opacity:opac}},
 ]);
 
 
 
 
 // create a network
+
+
+
 var container = document.getElementById("mynetwork");
 var data = {
     nodes: nodes,
@@ -99,12 +98,30 @@ var data = {
     
 };
 var options = {
+    layout:{
+        // randomSeed:2
+    },
     nodes:{
         shapeProperties: {
             useBorderWithImage: true,
           },
     },
     interaction: { hover: true },
+    // physics: {
+    //     barnesHut: {
+    //         theta:0,
+    //       centralGravity:0,
+    //       gravitaionalConstant: -3000,
+    //       nodeDistance: 400,
+    //       damping: 0,
+    //       avoidOverlap: 0.9,
+    //       springLength: 10,
+    //       springConstant: 0.05
+    //     },
+    //     maxVelocity: 0.03,
+    //     minVelocity: 0.01,
+    //     solver: "barnesHut"
+    //   }
     physics: {
         barnesHut: {
           theta: 0,
@@ -112,11 +129,14 @@ var options = {
           springConstant: 0.1,
           damping: 0.3,
           springLength: 200,
-          avoidOverlap: 0.3
+          avoidOverlap: 0.5
         },
-        maxVelocity: 27,
-        minVelocity: 0.08
+        maxVelocity: 0.015,
+        minVelocity: 0,
+        solver: "repulsion"
     },
+
+
    
 };
 var network = new vis.Network(container, data, options);
@@ -226,7 +246,8 @@ network.on("click", function (params) {
                 }
             };
             hideNodes()
-            network.focus(this.getNodeAt(params.pointer.DOM),options)
+            // network.focus(node,options)
+            network.fit(options)
             showStuff(node)
 
             setTimeout(function(){
