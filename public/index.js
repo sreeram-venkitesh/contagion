@@ -215,7 +215,7 @@ network.on("hoverNode", function (params) {
             console.log("Moving is true")
             moving = true;
             var options = {
-                scale: 1.5,
+                scale: 1,
                 offset: {x:0, y:0},
                 animation: { 
                 duration: 1000,
@@ -239,7 +239,7 @@ network.on("hoverNode", function (params) {
             console.log("Moving is true")
             moving = true;
             var options = {
-                scale: 2,
+                scale: 1,
                 offset: {x:0, y:0},
                 animation: { 
                 duration: 1000,
