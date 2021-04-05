@@ -205,8 +205,11 @@ function showStuff(x){
 
 var moving = false;
 
-network.on("hoverNode", function (params) {
+network.on("hoverNode",function (params){
     network.canvas.body.container.style.cursor = 'pointer'
+});
+
+network.on("click", function (params) {
     const node = this.getNodeAt(params.pointer.DOM)
 
     if(node < 8){
