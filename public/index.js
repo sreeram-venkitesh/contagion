@@ -191,8 +191,6 @@ var options = {
 };
 var network = new vis.Network(container, data, options);
 
-network.fit()
-
 function hideNodes(){
 
     nodes.update({id: 1, hidden: true});
