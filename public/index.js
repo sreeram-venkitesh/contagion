@@ -355,11 +355,11 @@ network.on("blurNode", function (params) {
     hideNodes()
 });
 
-network.on("click", function (params) {
+// network.on("click", function (params) {
    
-    alert("Node clicked!");
+//     alert("Node clicked!");
     
     
     
     
-  });
+//   });
