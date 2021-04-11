@@ -33,11 +33,7 @@ h1{
     position: absolute;
 }
 
-.main-content{
-    height: 100%;
-    width:100%;
-    background-color: #eee;
-}
+
 
 
 .title{
@@ -61,6 +57,12 @@ h1{
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
+.vis-item.vis-background.workhours {
+    background: #AFD9FE;
+    z-index: -1;
+  }
+
+
 select{
     position: absolute;
     top:0;
@@ -72,9 +74,25 @@ select{
     z-index: 100;
 }
 
+.main-content{
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+
 .mynetwork {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.networkbg{
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
 }
 
