@@ -4,6 +4,7 @@
 //gray = #2d2d2d
 //dark gray = #31131f
 
+
 // const metaoptions = {
 //     numMetaballs: 100,
 //     minRadius: 3,
@@ -191,6 +192,14 @@ var options = {
 };
 var network = new vis.Network(container, data, options);
 
+// var ballPositions = [[255, 129], [610, 73], [486, 363],
+//         [117, 459], [484, 726], [843, 306], [789, 615], [1049, 82],
+//         [1292, 428], [1117, 733], [1352, 86], [92, 798]];
+
+
+
+
+
 function hideNodes(){
 
     nodes.update({id: 1, hidden: true});
@@ -349,10 +358,45 @@ network.on("hoverNode",function (params){
 //         }
 //     }  
 // });
+var ballPositions = [];
 
 network.on("blurNode", function (params) {
     network.canvas.body.container.style.cursor = 'default'
     hideNodes()
+});
+
+    // console.log(ballPositions)
+
+network.on("afterDrawing", function (params) {
+    var nodeID = 8;
+    
+    var ballPositions = [];
+
+    // var nodePosition = network.canvasToDOM(network.getPositions([nodeId])[nodeId]);
+    // console.log(nodePosition)
+
+    const node = network.getPositions([nodeID])[nodeID]
+    const corner = network.canvasToDOM({
+        x: node.x,
+        y: node.y
+      })
+    console.log(corner)
+
+    
+    // console.log(Object.entries(nodePosition))
+    // for(const item of Object.entries(nodePosition)){
+        var arr = []
+        arr.push(corner.x)
+        arr.push(corner.y)
+        ballPositions.push(arr)
+        var arr = []
+
+        arr.push(corner.x +150)
+        arr.push(corner.y +150)
+        ballPositions.push(arr)
+        generateConnections(circlePaths);
+    //  }
+    // console.log(ballPositions)
 });
 
 // network.on("click", function (params) {
@@ -363,3 +407,6 @@ network.on("blurNode", function (params) {
     
     
 //   });
+
+
+// 
