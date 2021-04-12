@@ -187,13 +187,13 @@
             { id: 22, shape:"circle", group: 2, title:(createPopup(15)), borderWidth: 0,  font: { size: 80,  color:"#fff" }, color: {border: "#0f0400", background: "#0f0400", hover: { background: "#0f0400",}, highlight: { background: "#0f0400", }}, hidden:false, size:100, padding:20, /*image: "assets/1.png", */ label: "  " /*label: "Controlling the Plague in British India"*/},
             { id: 23, shape:"circle", group: 3, title:(createPopup(16)), borderWidth: 0,  font: { size: 85,  color:"#fff" }, color: {border: "#0f0400", background: "#0f0400", hover: { background: "#0f0400",}, highlight: { background: "#0f0400", }}, hidden:false, size:100, padding:20, /*image: "assets/6.png", */ label: "  " /*label: "Ants and Antimicrobial Resistance"*/},
 
-            { id: 1, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "Mapping" },
-            { id: 2, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "Documenting"},
-            { id: 3, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "Transmission"},
-            { id: 4, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "Source"},
-            { id: 5, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "History"},
-            { id: 6, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "Experimenting"},
-            { id: 7, shape:"text", margin:40, group: 0, font: { size: 36, color:"#fff" }, hidden:true,  label: "Consequences"},
+            { id: 1, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:true,  label: "Mapping" },
+            { id: 2, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:false,  label: "DOCUMENTING"},
+            { id: 3, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:true,  label: "Transmission"},
+            { id: 4, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:false,  label: "SOURCE"},
+            { id: 5, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:true,  label: "History"},
+            { id: 6, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:false,  label: "EXPERIMENTING"},
+            { id: 7, shape:"text", margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:3, strokeColor:"#000" }, hidden:true,  label: "Consequences"},
 
         ]);
         var opac = 0;
@@ -284,7 +284,17 @@
             {from: 11, to: 12, length:550, color:{opacity:opac}},
             {from: 23, to: 13, length:550, color:{opacity:opac}},
             
+            {from: 1, to: 2, length:500, color:{opacity:opac}},
+            {from: 2, to: 3, length:500, color:{opacity:opac}},
+            {from: 3, to: 4, length:500, color:{opacity:opac}},
+            {from: 4, to: 5, length:500, color:{opacity:opac}},
+            {from: 5, to: 6, length:500, color:{opacity:opac}},
+            {from: 6, to: 7, length:500, color:{opacity:opac}},
+            {from: 7, to: 1, length:500, color:{opacity:opac}},
 
+            {from: 13, to: 1, length:600, color:{opacity:opac}},
+            {from: 12, to: 4, length:600, color:{opacity:opac}},
+            {from: 13, to: 7, length:600, color:{opacity:opac}},
 
 
         ]);
@@ -308,7 +318,10 @@
                     useBorderWithImage: true,
                 },
             },
-            interaction: { hover: true },
+            interaction: { 
+                hover: true,
+                zoomView: false,
+            },
              //physics: {
              //    barnesHut: {
              //      theta:0.3,
@@ -346,7 +359,7 @@
                 nodeDistance: 100,
                 damping: 0.001,
                 },
-                maxVelocity: 1,
+                maxVelocity: 0.1,
                 minVelocity: 0.001,
                 solver: "repulsion"
             }
@@ -367,11 +380,11 @@
         function hideNodes(){
 
             nodes.update({id: 1, hidden: true});
-            nodes.update({id: 2, hidden: true});
+            nodes.update({id: 2, hidden: false});
             nodes.update({id: 3, hidden: true});
-            nodes.update({id: 4, hidden: true});
+            nodes.update({id: 4, hidden: false});
             nodes.update({id: 5, hidden: true});
-            nodes.update({id: 6, hidden: true});
+            nodes.update({id: 6, hidden: false});
             nodes.update({id: 7, hidden: true});
             
         }
@@ -544,8 +557,8 @@
                 })
 
                 var arr = []
-                arr.push(corner.x)
-                arr.push(corner.y)
+                arr.push(corner.x+20)
+                arr.push(corner.y+20)
                 ballPositions.push(arr)
             }
             
@@ -554,7 +567,7 @@
             for (var i = 0, l = ballPositions.length; i < l; i++) {
                 var circlePath = new Path.Circle({
                     center: ballPositions[i],
-                    radius: 75
+                    radius: 65
                 });
                 circlePaths.push(circlePath);
             }
