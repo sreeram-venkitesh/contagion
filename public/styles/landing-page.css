@@ -87,6 +87,7 @@ select{
     position:absolute;
     top:0;
     left:0;
+    z-index:100;
 }
 
 .networkbg{
@@ -94,6 +95,7 @@ select{
     height:100%;
     top:0;
     left:0;
-    opacity: 0.1;
+    opacity: 1;
+    background-color: #2d2d2d;
 }
 
