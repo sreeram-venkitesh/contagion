@@ -91,7 +91,6 @@ select{
 }
 
 .networkbg{
-    position:absolute;
     width: 100%;
     height:100%;
     top:0;
@@ -102,7 +101,6 @@ select{
 }
 
 .networktext{
-    position:absolute;
     width: 100%;
     height:100%;
     top:0;
