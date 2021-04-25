@@ -17,21 +17,25 @@
 </head>
 <body>
     <div class="content">
-        <div class="sidebar">
-            <div class="sidetitle">
-                <h1 class="rotate title">CONTAGION</h1>
-            </div> 
-            <img class="logoimg" src="./assets/logo.png" alt="Logo" width="100px" height="auto">
+        <div id="opening-frame" class="opening-frame-container">
+            <img src="./assets/opening-frame.png" alt="" class="opening-frame">
         </div>
-        <div class="main-content">
-            <div class="networktext" id="networktext"></div>
+        <div class="main-content"> 
+           <div class="networktext" id="networktext"></div>
            <canvas class="networkbg" id="canvas-1"></canvas>
            <div class="mynetwork" id="mynetwork"></div>
+           <div class="overlay" id="overlay"></div>
+            <button id="infobutton" class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width:30px; height:30px;" fill="none" viewBox="0 0 24 24" stroke="white">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </button>
+               <img id="legendcard" class="legend" src="./assets/legend.svg" alt="">
+            
         </div>
     </div>
     <script src="../dist/bundle.js"></script>
     <script type="text/paperscript" canvas="canvas-1" src="./index.js">
-       
     </script>
    
 </body>

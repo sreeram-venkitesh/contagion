@@ -11,6 +11,32 @@ function getVector(radians, length) {
     });
 }
 
+document.getElementById('opening-frame').addEventListener('click',()=>{
+        document.getElementById('opening-frame').className = "opening-frame-container openframe-animate"
+})
+
+const infobutton = document.getElementById('infobutton');
+const legendcard = document.getElementById('legendcard');
+
+infobutton.addEventListener('click',()=>{
+    if(legendcard.style.visibility == 'visible'){
+        legendcard.style.visibility = 'hidden';
+        document.getElementById("networktext").className = "networktext"
+        document.getElementById("canvas-1").className = "networkbg"
+       document.getElementById("mynetwork").className = "mynetwork"
+        document.getElementById('overlay').style.visibility = 'hidden';
+    }
+    else{
+        legendcard.style.visibility = 'visible';
+        document.getElementById("networktext").className = "networktext blur"
+        document.getElementById("canvas-1").className = "networkbg blur"
+        document.getElementById("mynetwork").className = "mynetwork blur"
+        document.getElementById('overlay').style.visibility = 'visible';
+
+
+    }
+})
+
 function metaball(ball1, ball2, v, handle_len_rate, maxDistance) {
     var center1 = ball1.position;
     var center2 = ball2.position;
