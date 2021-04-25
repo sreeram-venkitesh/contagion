@@ -160,16 +160,27 @@ select{
    left:0;
 }
 
+@media screen and (max-width: 1024px){
+    .opening-frame{
+        width:100%;
+        height:auto;   
+    }
+}
+@media screen and (min-width: 1024px){
+    
+    .opening-frame{
+        width:auto;
+        height:100%;  
+    }
+
+}
+
 .openframe-animate{
     transform: translate3d(-100%, 0, 0);
     -webkit-transform: translate3d(-100%, 0, 0);
-    -webkit-transition: transform 2s ease;
 }
 
-.opening-frame{
-    width:auto;
-    height:100%;   
-}
+
 
 
 
