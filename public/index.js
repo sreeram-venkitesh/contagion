@@ -82,7 +82,7 @@ function generateConnections(paths) {
     connections.children = [];
     for (var i = 0, l = paths.length; i < l; i++) {
         for (var j = i - 1; j >= 0; j--) {
-            var path = metaball(paths[i], paths[j], 0.5, handle_len_rate, 200);
+            var path = metaball(paths[i], paths[j], 0.5, handle_len_rate, 150);
             if (path) {
                 connections.appendTop(path);
                 path.removeOnMove();
@@ -112,25 +112,25 @@ var DIR = "./assets/";
 var nodes = new vis.DataSet([
     { id: 8,  shape:"circle", group: 1,x:1000,y:0, title:(createPopup(1)), borderWidth: 0,  font:  { size: 100, color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/2.png", */ label: "  " /*label: "2020 Vision"*/},
     { id: 9,  shape:"circle", group: 1, title:(createPopup(2)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/9.png", */ label: "  " /*label: "Covid-19 Indoor Safety Toop"*/},
-    { id: 10, shape:"circle", group: 2,x:0,y:1000, title:(createPopup(3)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/11.png",*/ label: "  " /*label: "Mapping Cholera"*/},
-    { id: 11, shape:"circle", group: 2,x:0,y:900, title:(createPopup(4)), borderWidth: 0,  font:  { size: 100, color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/5.png", */ label: "  " /*label: "Theriak Disease Map"*/},
-    { id: 12, shape:"circle", group: 3,x:1600,y:900, title:(createPopup(5)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/8.png", */ label: "  " /*label: "A Cluster of 17 Cases"*/},
+    { id: 10, shape:"circle", group: 2,x:0,y:230, title:(createPopup(3)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/11.png",*/ label: "  " /*label: "Mapping Cholera"*/},
+    { id: 11, shape:"circle", group: 2,x:0,y:320, title:(createPopup(4)), borderWidth: 0,  font:  { size: 100, color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/5.png", */ label: "  " /*label: "Theriak Disease Map"*/},
+    { id: 12, shape:"circle", group: 3,x:1600,y:500, title:(createPopup(5)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/8.png", */ label: "  " /*label: "A Cluster of 17 Cases"*/},
     { id: 13, shape:"circle", group: 1, title:(createPopup(6)), borderWidth: 0,  font:  { size: 100, color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/4.png", */ label: "  " /*label: "When the World Was A Laugh"*/},
     { id: 14, shape:"circle", group: 1, title:(createPopup(7)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/12.png",*/ label: "  " /*label: "Chameleon Project"*/},
     { id: 15, shape:"circle", group: 1,x:1000,y:10, title:(createPopup(8)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/7.png", */ label: "  " /*label: "The Glassroom: Misinformation Edition"*/},
-    { id: 16, shape:"circle", group: 2,x:0,y:1000, title:(createPopup(9)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/10.png",*/ label: "  " /*label: "Malware Museum"*/},
-    { id: 17, shape:"circle", group: 3, x:1660,y:750, title:(createPopup(10)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/15.png",*/ label: "  " /*label: "Robert Koch Cholera Map"*/},
-    { id: 18, shape:"circle", group: 3,x:1650,y:600,title:(createPopup(11)), borderWidth: 0,  font: { size: 100, color:"#fff" }, color: {border:  "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/16.png",*/ label: "  " /*label: "Crystallizing Viral History"*/},
+    { id: 16, shape:"circle", group: 2,x:0,y:300, title:(createPopup(9)), borderWidth: 0,  font:  { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/10.png",*/ label: "  " /*label: "Malware Museum"*/},
+    { id: 17, shape:"circle", group: 3, x:1660,y:450, title:(createPopup(10)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/15.png",*/ label: "  " /*label: "Robert Koch Cholera Map"*/},
+    { id: 18, shape:"circle", group: 3,x:1650,y:400,title:(createPopup(11)), borderWidth: 0,  font: { size: 100, color:"#fff" }, color: {border:  "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/16.png",*/ label: "  " /*label: "Crystallizing Viral History"*/},
     { id: 19, shape:"circle", group: 1, title:(createPopup(12)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/13.png",*/ label: "  " /*label: "Fluid Dialogues"*/},
-    { id: 20, shape:"circle", group: 3,x:840,y:900, title:(createPopup(13)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/3.png", */ label: "  " /*label: "Drawing the Bombay Plague"*/},
-    { id: 21, shape:"circle", group: 2,x:0,y:1050, title:(createPopup(14)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/14.png",*/ label: "  " /*label: "Alexander Fleming"*/},
-    { id: 22, shape:"circle", group: 2,x:10,y:880, title:(createPopup(15)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/1.png", */ label: "  " /*label: "Controlling the Plague in British India"*/},
-    { id: 23, shape:"circle", group: 3, x:840,y:900,title:(createPopup(16)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/6.png", */ label: "  " /*label: "Ants and Antimicrobial Resistance"*/},
+    { id: 20, shape:"circle", group: 3,x:840,y:700, title:(createPopup(13)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/3.png", */ label: "  " /*label: "Drawing the Bombay Plague"*/},
+    { id: 21, shape:"circle", group: 2,x:0,y:200, title:(createPopup(14)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/14.png",*/ label: "  " /*label: "Alexander Fleming"*/},
+    { id: 22, shape:"circle", group: 2,x:0,y:280, title:(createPopup(15)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/1.png", */ label: "  " /*label: "Controlling the Plague in British India"*/},
+    { id: 23, shape:"circle", group: 3, x:840,y:700,title:(createPopup(16)), borderWidth: 0,  font: { size: 100,  color:"#fff" }, color: {border: "#d62b2b", background: "#d62b2b", hover: { background: "#d62b2b",}, highlight: { background: "#d62b2b", }}, hidden:false, size:100, padding:20, /*image: "assets/6.png", */ label: "  " /*label: "Ants and Antimicrobial Resistance"*/},
 
-    { id: 1, x:800,y:800, fixed:true, shape:"image", image: DIR + 'mapping.svg',       size:100, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Mapping" */},
-    { id: 2, x:800,y:800, fixed:true, shape:"image", image: DIR + 'documenting.svg',   size:100, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Documenting"*/},
-    { id: 3, x:800,y:800, fixed:true, shape:"image", image: DIR + 'experimenting.svg', size:100, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Experimenting"*/},
-    { id: 4, x:800,y:800, fixed:true, shape:"image", image: DIR + 'narrating.svg',     size:100, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Narrating"*/},
+    { id: 1, x:800,y:800, fixed:true, shape:"image", image: DIR + 'mapping.svg',       size:60, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Mapping" */},
+    { id: 2, x:800,y:800, fixed:true, shape:"image", image: DIR + 'documenting.svg',   size:60, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Documenting"*/},
+    { id: 3, x:800,y:800, fixed:true, shape:"image", image: DIR + 'experimenting.svg', size:60, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Experimenting"*/},
+    { id: 4, x:800,y:800, fixed:true, shape:"image", image: DIR + 'narrating.svg',     size:60, margin:60, group: 0, font: { size: 36, color:"#fff", strokeWidth:0, strokeColor:"#000" }, hidden:true,  /*label: "Narrating"*/},
 ]);
 
 var opac = 0;
@@ -183,18 +183,17 @@ console.log(d)
 
 
 if(d <= new Date('2021-5-2')){
-    nodes.add({ id: 24,  shape:"circle", group: 1,x:800,y:1600, title:"Sylvie Briand", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
-    nodes.add({ id: 25,  shape:"circle", group: 1,x:800,y:1600, title:"Gautam Menon", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
-    nodes.add({ id: 26,  shape:"circle", group: 1,x:800,y:1600, title:"Gautam Menon Tutorial", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
-    nodes.add({ id: 27,  shape:"circle", group: 1,x:800,y:1600, title:"Sheila Jasanoff", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
-    nodes.add({ id: 28,  shape:"circle", group: 1,x:800,y:1600, title:"Lena Bui", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
+    nodes.add({ id: 24,  shape:"circle", group: 1,x:1660,y:500, title:"Sylvie Briand", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
+    nodes.add({ id: 25,  shape:"circle", group: 1,x:1650,y:600, title:"Gautam Menon", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
+    nodes.add({ id: 26,  shape:"circle", group: 1,x:1600,y:700, title:"Gautam Menon Tutorial", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
+    nodes.add({ id: 27,  shape:"circle", group: 1,x:1000,y:1600, title:"Sheila Jasanoff", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
+    nodes.add({ id: 28,  shape:"circle", group: 1,x:100,y:300, title:"Lena Bui", borderWidth: 0,  font:  { size: 80, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
     
-    newEdges.add({from: 24, to: 25, length:200, color:{opacity:0}})
-    newEdges.add({from: 25, to: 26, length:200, color:{opacity:0}})
-    newEdges.add({from: 26, to: 27, length:200, color:{opacity:0}})
-    newEdges.add({from: 27, to: 28, length:200, color:{opacity:0}})
-    newEdges.add({from: 28, to: 24, length:200, color:{opacity:0}})
-    newEdges.add({from: 25, to: 27, length:200, color:{opacity:0}})
+    newEdges.add({from: 24, to: 20, length:200, color:{opacity:0}})
+    newEdges.add({from: 25, to: 22, length:200, color:{opacity:0}})
+    newEdges.add({from: 26, to: 22, length:200, color:{opacity:0}})
+    newEdges.add({from: 27, to: 11, length:200, color:{opacity:0}})
+  
 
 }else if((d >= new Date('2022-5-3')) && (d <= new Date('2022-5-9')) ){
     nodes.add({ id: 24,  shape:"circle", group: 1,x:800,y:1600, title:"Event 1", borderWidth: 0,  font:  { size: 100, color:"#fff" }, color: {border: "#3e6cda", background: "#3e6cda", hover: { background: "#3e6cda",}, highlight: { background: "#3e6cda", }}, hidden:false, padding:20,label: "  "});
@@ -521,7 +520,7 @@ network.on("blurNode", function (params) {
 
 function updater(){
     project.clear()
-    var nodeID = [8,11,14,15,17,22,24,26];
+    var nodeID = [8,11,14,15,16,17,22,24,26];
     // var nodePosition = network.canvasToDOM(network.getPositions([nodeId])[nodeId]);
     // console.log(nodePosition)
 
@@ -544,7 +543,7 @@ function updater(){
     for (var i = 0, l = ballPositions.length; i < l; i++) {
         var circlePath = new Path.Circle({
             center: ballPositions[i],
-            radius: 35
+            radius: 40
         });
         circlePaths.push(circlePath);
     }
@@ -556,7 +555,7 @@ function updater(){
 
         for (var i = 0, l = paths.length; i < l; i++) {
             for (var j = i - 1; j >= 0; j--) {
-                var path = metaball(paths[i], paths[j], 0.5, handle_len_rate, 200);
+                var path = metaball(paths[i], paths[j], 0.5, handle_len_rate, 150);
                 if (path){
                     connections.appendTop(path);
                     path.removeOnMove();
