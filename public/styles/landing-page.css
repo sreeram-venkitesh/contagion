@@ -138,7 +138,7 @@ select{
     top:0;
     right:0;
     height:95%;
-    margin:20px;
+    margin-top:30px;
     text-align:center;
     z-index:9999;
 }
@@ -163,7 +163,8 @@ select{
 @media screen and (max-width: 1024px){
     .opening-frame{
         width:100%;
-        height:auto;   
+        height:auto; 
+        margin-top:20%;  
     }
 }
 @media screen and (min-width: 1024px){

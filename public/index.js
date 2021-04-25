@@ -25,6 +25,8 @@ infobutton.addEventListener('click',()=>{
         document.getElementById("canvas-1").className = "networkbg"
        document.getElementById("mynetwork").className = "mynetwork"
         document.getElementById('overlay').style.visibility = 'hidden';
+        document.getElementById("buttonpath").setAttribute('d','M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z');
+
     }
     else{
         legendcard.style.visibility = 'visible';
@@ -32,7 +34,7 @@ infobutton.addEventListener('click',()=>{
         document.getElementById("canvas-1").className = "networkbg blur"
         document.getElementById("mynetwork").className = "mynetwork blur"
         document.getElementById('overlay').style.visibility = 'visible';
-
+        document.getElementById("buttonpath").setAttribute('d','M6 18L18 6M6 6l12 12');
 
     }
 })
