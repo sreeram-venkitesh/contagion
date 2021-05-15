@@ -2,11 +2,7 @@ body, html{
     height: 100%;
     width : 100%;
     margin:0;
-    
-}
-
-h1{
-    font-size: 24px;
+    font-size: 2vh;
 }
 
 .content{
@@ -14,65 +10,6 @@ h1{
     height:100%;
 }
 
-
-.sidebar{
-    height: 100%;
-    width:100px;
-    display: block;
-
-}
-.sidetitle{
-    height: 100%;
-    width:100px;
-    display: flex;
-
-}
-
-.logoimg{
-    bottom:0;
-    position: absolute;
-}
-
-
-
-
-.title{
-    width: 100%;
-    vertical-align: middle;
-  
-    margin: auto 0;
-}
-
-.rotate {
-    transform: rotate(-90deg);
-    /* Safari */
-    -webkit-transform: rotate(-90deg);
-    /* Firefox */
-    -moz-transform: rotate(-90deg);
-    /* IE */
-    -ms-transform: rotate(-90deg);
-    /* Opera */
-    -o-transform: rotate(-90deg);  
-    /* Internet Explorer */
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-
-.vis-item.vis-background.workhours {
-    background: #AFD9FE;
-    z-index: -1;
-  }
-
-
-select{
-    position: absolute;
-    top:0;
-    right:0;
-    font-size: 24px;
-    padding: 10px;
-    background-color: #fff;
-    width: 250px;
-    z-index: 100;
-}
 
 .main-content{
     height: 100%;
@@ -111,7 +48,7 @@ select{
     top:0;
     left:0;
     z-index:1;
-    opacity: 0.9;
+    opacity: 0.7;
     background-color: transparent;
 }
 
@@ -132,11 +69,21 @@ select{
     z-index:10000;
 }
 
+.languagebutton{
+    position: absolute;
+    top:0;
+    right:3%;
+    padding:0.5rem 0.5rem 0.4rem 0.5rem;
+    margin:1rem 1rem 1rem 1rem;
+    z-index:10000;
+}
+
 .legend{
     visibility: hidden;
     position: absolute;
     top:0;
     right:0;
+    margin-right:30px;
     height:95%;
     margin-top:30px;
     text-align:center;
@@ -144,10 +91,17 @@ select{
 }
 
 
+
+#mediator:hover{
+    cursor: pointer;
+}
+
+
 .blur {
-    filter: blur(5px);
+    backdrop-filter: blur(5px);
+    filter:blur(0px);
     -webkit-filter: blur(5px);
-  }
+}
 
 .opening-frame-container{
    width: 100%;
@@ -166,6 +120,43 @@ select{
         height:auto; 
         margin-top:20%;  
     }
+    .popup-exhibit{
+        width:95%;
+        height:150px;
+        border-radius:10px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
+        background-color:white;
+        z-index:9999; 
+        display:flex;
+        flex-direction:row;
+    }
+    .popup-programme{
+        width:95%;
+        height:200px;
+        border-radius:10px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
+        background-color:white; 
+        z-index:9999;
+        display:flex;
+        flex-direction:row;
+    }
+    .mediator{
+        position: absolute;
+        right:0;
+        bottom:0;
+        width:100px;
+        height:100px;
+        margin-right:30px;
+        margin-bottom:20%;
+        text-align:center;
+        z-index:9997;
+    }
 }
 @media screen and (min-width: 1024px){
     
@@ -173,7 +164,39 @@ select{
         width:auto;
         height:100%;  
     }
-
+    .popup-exhibit{
+        width:500px;
+        height:150px;
+        border-radius:10px;
+        position:fixed;
+        background-color:white;
+        z-index:9999; 
+        top:40%;
+        left:35%;
+        display:flex;
+        flex-direction:row;
+    }
+    .popup-programme{
+        width:500px;
+        height:200px;
+        border-radius:10px;
+        position:fixed;
+        background-color:white; 
+        z-index:9999; 
+        top:40%; 
+        left:35%; 
+        display:flex; 
+        flex-direction:row;
+    }
+    .mediator{
+        position: absolute;
+        right:0;
+        bottom:0;
+        margin-right:30px;
+        margin-bottom:30px;
+        text-align:center;
+        z-index:9997;
+    }
 }
 
 .openframe-animate{
@@ -181,7 +204,137 @@ select{
     -webkit-transform: translate3d(-100%, 0, 0);
 }
 
+/* menu styling css  */
 
+*,
+*::after,
+*::before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
+.menu-container,
+.st-pusher,
+.st-content {
+	height: 100%;
+    background-color: #d62b2b;
+}
 
+.pusher, .menu-container {
+    height: 100%;
+}
+.menu-container {
+    position: relative;
+    overflow: hidden;
+}
 
+.pusher {
+	position: relative;
+	left: 0;
+	z-index: 99;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.pusher::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	background: rgba(0,0,0,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+.menu-open .pusher::after {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: white;
+}
+.menu::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.inner-menu {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% auto 4%;
+    grid-gap: 2rem;
+  
+    color: white;
+    background-color: #d62b2b;
+    padding: 3rem 6rem 3rem 12rem;
+}
+
+.inner-menu .content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.inner-menu ul {
+    /* display: flex;
+    flex-direction: column; */
+    /* padding: 0 0 1rem 0; */
+}
+
+.inner-menu ul li {
+    /* padding: 1rem 0 1rem 0; */
+}
+
+.inner-menu a:hover {
+    color:#2d2d2d;
+}
+.exhibit-menu-list {
+    padding: 1rem 0 0 0;
+    gap: 0.3rem;
+}
+  
+.menu-open .menu::after {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+  
+/* Effect 1: Slide in on top */
+.effect.menu {
+    visibility: visible;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.effect.menu-open .effect.menu {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.effect.menu::after {
+    display: none;
+}
